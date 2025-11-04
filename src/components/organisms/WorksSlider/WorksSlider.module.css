@@ -161,7 +161,7 @@
   }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 425px) {
   .viewport {
     height: 150px;
   }
