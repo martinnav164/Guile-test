@@ -123,7 +123,6 @@
   align-items: center;
   gap: 12px;
 }
-
 .pin svg {
   fill: var(--icon);
 }
@@ -147,10 +146,19 @@
 }
 
 .when {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 8px;
+  cursor: pointer;
+  background: none;
+  border: 0;
+  padding: 0;
 }
+.when:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
 .muted2 {
   color: var(--muted);
   font-family: var(--font);
@@ -165,8 +173,70 @@
   background: var(--divider);
   border-radius: 50%;
 }
+
 .chev {
   fill: var(--icon);
+  transition: transform 180ms ease;
+  transform: rotate(0deg);
+}
+.when.open .chev {
+  transform: rotate(180deg);
+}
+
+.hours {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 260ms ease, margin-top 260ms ease;
+  margin-top: 0;
+}
+.hoursOpen {
+  max-height: 1000px;
+  margin-top: 10px;
+}
+
+.hoursHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted2);
+  font-family: var(--font);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  cursor: pointer;
+}
+.chevUp {
+  font-size: 12px;
+  line-height: 1;
+}
+
+.hoursList {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  column-gap: 16px;
+  row-gap: 8px;
+  margin-top: 10px;
+}
+.hoursDay {
+  color: #a2a2a2;
+  font-family: var(--font);
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: lowercase;
+  letter-spacing: -0.01em;
+}
+.hoursTime {
+  justify-self: left;
+  color: #e7e7e7;
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+}
+.hoursTime.off {
+  font-weight: 600;
+  color: #d2d2d2;
 }
 
 .socials {
@@ -180,7 +250,6 @@
   background: #232323;
   border-radius: 8px;
 }
-
 .socialBtn img {
   width: 24px;
   height: 24px;

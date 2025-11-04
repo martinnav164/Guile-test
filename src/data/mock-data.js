@@ -35,7 +35,6 @@ export const sideBarData = {
   bookLabel: "book an appointment",
 }
 
-// Option 1: Use import statements (recommended)
 import photo1 from "../assets/photo-1.png";
 import photo2 from "../assets/photo-2.png";
 import photo3 from "../assets/photo-3.png";
