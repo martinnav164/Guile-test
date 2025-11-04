@@ -1,0 +1,231 @@
+.root {
+  position: relative;
+}
+
+.trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  height: 40px;
+  width: 84px;
+  padding: 0 14px 0 0;
+  border-radius: 100px;
+  border: 0;
+  background: var(--surface-2, #191919);
+  cursor: pointer;
+  outline: none;
+  transition: background 120ms ease;
+}
+.trigger:hover {
+  background: var(--surface-2-hover, #191919);
+}
+.triggerPressed {
+  background: var(--surface-2-pressed, #1f1f1f);
+}
+
+.avatar {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.caret {
+  width: 16px;
+  height: 16px;
+  position: relative;
+}
+.caret::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-left: 2px solid var(--icon-muted, #d6d6d6);
+  border-bottom: 2px solid var(--icon-muted, #d6d6d6);
+  transform: rotate(-45deg) translateY(-1px);
+  transform-origin: 50% 50%;
+}
+
+.menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 208px;
+  border-radius: 20px;
+  background: var(--surface-2, #191919);
+  padding: 4px 0;
+  display: grid;
+  grid-auto-rows: min-content;
+  box-shadow: var(--shadow-lg, 0 8px 24px rgba(0, 0, 0, 0.5));
+  opacity: 0;
+  transform: translateY(-4px);
+  pointer-events: none;
+  transition: opacity 120ms ease, transform 120ms ease;
+  z-index: 20;
+}
+.menuOpen {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.menuClosed {
+  display: block;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 44px;
+  padding: 0 16px;
+}
+.rowLabel {
+  font-family: var(
+    --font-sans,
+    "Enkel",
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    sans-serif
+  );
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: lowercase;
+  color: var(--fg-on-surface, #e7e7e7);
+}
+
+.themeSwitch {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  height: 32px;
+  width: 88px;
+  border-radius: 100px;
+  background: var(--surface-3, #2d2d2d);
+}
+.themeBtn {
+  height: 24px;
+  width: 24px;
+  border-radius: 12px;
+  border: 0;
+  background: transparent;
+  display: inline-grid;
+  place-items: center;
+  cursor: pointer;
+}
+.themeBtnActive {
+  background: var(--surface-1, #191919);
+}
+.icon {
+  width: 16px;
+  height: 16px;
+  background: var(--icon-muted, #c0c0c0);
+  border-radius: 4px;
+}
+
+.divider {
+  margin: 0;
+  border: 0;
+  border-top: 1px solid var(--line-subtle, #1c1c1c);
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0;
+  display: grid;
+  row-gap: 4px;
+}
+
+.item {
+  --h: 44px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: var(--h);
+  padding: 12px 16px;
+  border-radius: 12px;
+  color: var(--fg-on-surface, #e7e7e7);
+  text-decoration: none;
+  background: transparent;
+  border: 0;
+  font-family: var(
+    --font-sans,
+    "Enkel",
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    sans-serif
+  );
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: lowercase;
+  cursor: pointer;
+}
+.item:hover {
+  background: var(--surface-hover, #1f1f1f);
+}
+.item:focus-visible {
+  outline: 2px solid var(--focus, #5b9cff);
+  outline-offset: 2px;
+}
+.itemDisabled,
+.item[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.itemMuted {
+  color: var(--fg-muted, #a2a2a2);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+.itemLabel {
+  flex: 1 1 auto;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 16px;
+  min-width: 32px;
+  padding: 4px 12px;
+  border-radius: 100px;
+  background: var(--accent-amber-600, #ac8745);
+  color: var(--badge-fg, #f4f4f4);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.footer {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0 16px;
+}
+.footerLink {
+  font-family: var(
+    --font-sans,
+    "Enkel",
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    sans-serif
+  );
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 10px;
+  letter-spacing: -0.02em;
+  color: var(--fg-muted, #a2a2a2);
+  text-decoration: none;
+}
+.footerLink:hover {
+  text-decoration: underline;
+}

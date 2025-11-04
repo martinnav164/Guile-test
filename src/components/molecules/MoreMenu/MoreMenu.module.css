@@ -1,0 +1,81 @@
+.root {
+  position: relative;
+}
+
+.btn {
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 8px;
+  color: var(--icon, #d6d6d6);
+  cursor: pointer;
+}
+.btn:active {
+  background: var(--surface-pressed, #1f1f1f);
+}
+.btn:focus-visible {
+  outline: 2px solid var(--focus, #5b9cff);
+  outline-offset: 2px;
+}
+
+.menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  display: none;
+  padding: 4px;
+  border-radius: 16px;
+  background: var(--surface-2, #191919);
+  z-index: 1000;
+}
+.open {
+  display: block;
+}
+.alignEnd {
+  right: 0;
+}
+.alignStart {
+  left: 0;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  color: var(--text, #acacac);
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  font-family: var(
+    --font-sans,
+    "Enkel",
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    sans-serif
+  );
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: -0.01em;
+  text-transform: lowercase;
+}
+.item:hover {
+  background: var(--surface-hover, #2d2d2d);
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  display: inline-grid;
+  place-items: center;
+}
+.label {
+  white-space: nowrap;
+}

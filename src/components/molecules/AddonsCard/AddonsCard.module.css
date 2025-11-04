@@ -1,0 +1,89 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  gap: 12px;
+  width: 100%;
+  max-width: 628px;
+  background: #191919;
+  border-radius: 20px;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  width: 100%;
+}
+
+.addons {
+  font-family: "Enkel", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #cfb686;
+}
+.addonsNone {
+  color: #999999;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  gap: 16px;
+}
+
+.title {
+  margin: 0;
+  font-family: "Enkel", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+  text-transform: lowercase;
+  color: #dddddd;
+}
+
+.right {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.duration {
+  font-family: "Enkel", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: right;
+  letter-spacing: -0.01em;
+  text-transform: lowercase;
+  color: #acacac;
+}
+
+.price {
+  font-family: "Enkel", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+  color: #e7e7e7;
+}
+
+.desc {
+  margin: 0;
+  width: 100%;
+  font-family: "Enkel", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: -0.01em;
+  color: #7b7b7b;
+}

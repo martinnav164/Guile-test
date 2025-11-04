@@ -1,0 +1,83 @@
+@font-face {
+  font-family: "Enkel";
+  src: url("./assets/fonts/Variable/Enkel-VariableVF.woff2")
+      format("woff2-variations"),
+    url("./assets/fonts/Variable/Enkel-VariableVF.woff")
+      format("woff-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Enkel";
+  src: url("./assets/fonts/Variable/Enkel-VariableObliqueVF.woff2")
+      format("woff2-variations"),
+    url("./assets/fonts/Variable/Enkel-VariableObliqueVF.woff")
+      format("woff-variations");
+  font-weight: 100 900;
+  font-style: oblique;
+  font-display: swap;
+}
+
+:root {
+  --color-primary: #383b3d;
+  --color-accent: #212121;
+  --color-background: #121212;
+  --font-weight-light: 300;
+  --font-weight-semibold: 600;
+  --font-weight-body: var(--font-weight-light);
+  --font-weight-heading: var(--font-weight-semibold);
+
+  font-family: "Enkel", system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
+  line-height: 1.5;
+  font-weight: var(--font-weight-body);
+  color: var(--color-primary);
+  background-color: var(--color-background);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* resets */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0px auto;
+  min-height: 100vh;
+  max-width: 1440px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hide-scrollbar {
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}

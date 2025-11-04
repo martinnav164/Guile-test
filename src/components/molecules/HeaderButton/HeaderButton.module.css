@@ -1,0 +1,91 @@
+.root {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+
+  height: 40px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background: transparent;
+  padding: 0 20px;
+
+  transition: background 120ms ease;
+  outline: none;
+}
+
+.noBadge {
+  padding: 0 20px;
+}
+
+.withBadge {
+  padding: 0 16px;
+}
+
+.root:hover {
+  background: var(--surface-hover, #191919);
+}
+.root:active {
+  background: var(--surface-pressed, #1f1f1f);
+}
+.root:focus-visible {
+  outline: 2px solid var(--focus, #5b9cff);
+  outline-offset: 2px;
+}
+
+.isHover {
+  background: var(--surface-hover, #191919);
+}
+.isPressed {
+  background: var(--surface-pressed, #1f1f1f);
+}
+
+.label {
+  height: 20px;
+  font-family: var(
+    --font-sans,
+    "Enkel",
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    sans-serif
+  );
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: lowercase;
+  letter-spacing: 0;
+  color: var(--fg-on-surface, #e7e7e7);
+}
+
+.badge {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 12px;
+  min-width: 32px;
+  height: 16px;
+
+  background: var(--accent-amber-600, #ac8745);
+  color: var(--badge-fg, #f4f4f4);
+  border-radius: 100px;
+
+  font-family: var(
+    --font-sans,
+    "Enkel",
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    sans-serif
+  );
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: -0.02em;
+  text-transform: lowercase;
+}
