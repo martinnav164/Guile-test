@@ -1,0 +1,54 @@
+.container {
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: center;
+  gap: 241px;
+  overflow: hidden;
+  min-height: 0;
+  margin-top: 23px;
+  padding-left: 100px;
+}
+
+.contentArea {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  overflow: auto;
+  flex: 1;
+  padding: 20px;
+  max-width: 732px;
+}
+
+@media (max-width: 1440px) {
+  .mainContent {
+    gap: 100px;
+    padding-left: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    gap: 50px;
+    padding-left: 50px;
+  }
+}
+
+@media (max-width: 390px) {
+  .container {
+    height: auto;
+  }
+  .mainContent {
+    gap: 20px;
+    padding-left: 20px;
+    flex-direction: column;
+    overflow: auto;
+  }
+}

@@ -148,3 +148,21 @@
   place-items: center;
   opacity: 0;
 }
+
+@media (max-width: 1440px) {
+  .viewport {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .viewport {
+    height: 200px;
+  }
+}
+
+@media (max-width: 390px) {
+  .viewport {
+    height: 150px;
+  }
+}

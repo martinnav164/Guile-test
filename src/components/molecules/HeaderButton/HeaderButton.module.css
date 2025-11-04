@@ -89,3 +89,9 @@
   letter-spacing: -0.02em;
   text-transform: lowercase;
 }
+
+@media (max-width: 390px) {
+  .root {
+    display: none;
+  }
+}

@@ -2,3 +2,14 @@
   display: grid;
   gap: 1.5rem;
 }
+
+.title {
+  margin: 0;
+  font-family: "Enkel", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.15em;
+  text-transform: lowercase;
+  color: #606060;
+}

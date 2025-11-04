@@ -5,6 +5,7 @@ import styles from './FAQ.module.css';
 export default function FAQ({ items }) {
   return (
     <div className={styles.faq}>
+        <h3 className={styles.title}>got questions?</h3>
       {items.map((it, i) => (
         <FAQItem
           key={it.id ?? i}
